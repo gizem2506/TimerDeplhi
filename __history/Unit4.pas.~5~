@@ -1,0 +1,123 @@
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls;
+
+type
+  TForm4 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Timer1: TTimer;
+    procedure Timer1Timer(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+    sayac: Integer;
+
+implementation
+       const
+dizin:Array[1..81] of String=(
+'ADANA',
+'ADIYAMAN',
+'AFYON',
+'AÐRI',
+'AMASYA',
+'ANKARA',
+'ANTALYA',
+'ARTVÝN',
+'AYDIN',
+'BALIKESÝR',
+'BÝLECÝK',
+'BÝNGÖL',
+'BÝTLÝS',
+'BOLU',
+'BURDUR',
+'BURSA',
+'ÇANAKKALE',
+'ÇANKIRI',
+'ÇORUM',
+'DENÝZLÝ',
+'DÝYARBAKIR',
+'EDÝRNE',
+'ELAZIÐ',
+'ERZÝNCAN',
+'ERZURUM',
+'ESKÝÞEHÝR',
+'GAZÝANTEP',
+'GÝRESUN',
+'GÜMÜÞHANE',
+'HAKKARÝ',
+'HATAY',
+'ISPARTA',
+'MERSÝN',
+'ÝSTANBUL',
+'ÝZMÝR',
+'KARS',
+'KASTAMONU',
+'KAYSERÝ',
+'KIRIKLARELÝ',
+'KIRÞEHÝR',
+'KOCAELÝ',
+'KONYA',
+'KÜTAHYA',
+'MALATYA',
+'MANÝSA',
+'KAHRAMANMARAÞ',
+'MARDÝN',
+'MUÐLA',
+'MUÞ',
+'NEVÞEHÝR',
+'NÝÐDE',
+'ORDU',
+'RÝZE',
+'SAKARYA',
+'SAMSUN',
+'SÝÝRT',
+'SÝNOP',
+'SÝVAS',
+'TEKÝRDAÐ',
+'TOKAT',
+'TRABZON',
+'TUNCELÝ',
+'ÞANLIURFA',
+'UÞAK',
+'VAN',
+'YOZGAT',
+'ZONGULDAK',
+'AKSARAY',
+'BAYBURT',
+'KARAMAN',
+'KIRIKKALE',
+'BATMAN',
+'ÞIRNAK',
+'BARTIN',
+'ARDAHAN',
+'IÐDIR',
+'YALOVA',
+'KARABÜK',
+'KÝLÝS',
+'OSMANÝYE',
+'DÜZCE' );
+
+
+{$R *.dfm}
+
+
+
+procedure TForm4.Timer1Timer(Sender: TObject);
+begin
+if(sayac=81) then sayac:=0;
+sayac:=sayac+1;
+label3.Caption:=dizin[sayac];
+end;
+
+end.
